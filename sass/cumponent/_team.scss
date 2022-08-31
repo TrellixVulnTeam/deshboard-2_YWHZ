@@ -1,0 +1,67 @@
+.team {
+  padding: 1rem 4rem;
+  &__content {
+    margin-top: 1rem;
+  }
+  &__img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > * {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    img {
+      width: 5rem;
+      @media only screen and (max-width: $tablate) {
+        width: 3rem;
+      }
+    }
+  }
+
+  &__img-text {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-primary-3, 0.3);
+    color: $color-primary-4;
+    @media only screen and (max-width: $tablate) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__img-add-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba($color-primary-3, 0.3);
+    color: $color-primary-4;
+    border: 1px dashed $color-primary-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  &__info {
+    margin-top: 2rem;
+    box-shadow: 0 0 12px rgba($color-black, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    gap: 3rem;
+    p {
+      color: rgba($color-black, 0.5);
+    }
+    @media only screen and (max-width: $laptop-m) {
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    @media only screen and (max-width: $mobile-l) {
+      justify-content: space-between;
+    }
+  }
+}

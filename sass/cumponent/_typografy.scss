@@ -1,0 +1,57 @@
+.heading-2 {
+  font-size: 2rem;
+}
+.heading-3 {
+  font-size: 1.6rem;
+}
+.heading-4 {
+  font-size: 1.8rem;
+}
+.d-text {
+  font-weight: 500;
+}
+.p-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.c-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $color-black;
+}
+
+.s-11,
+.s-12,
+.s-13 {
+  height: 0.6rem;
+  width: 0.6rem;
+  display: inline-block;
+  border-radius: 0.3rem;
+}
+.s-11 {
+  background-color: $color-primary-4;
+}
+.s-12 {
+  background-color: #00cbb3;
+}
+.s-13 {
+  background-color: #fff;
+}
+.s-21,
+.s-22,
+.s-23 {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.3rem;
+}
+.s-21,
+.s-22 {
+  border: 1px solid $color-primary-3;
+}
+.s-23 {
+  background-color: $color-black;
+  color: $color-white;
+}
+.mt {
+  margin-top: 1rem;
+}

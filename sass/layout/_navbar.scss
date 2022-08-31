@@ -1,0 +1,30 @@
+.navbar {
+  align-self: stretch;
+  @media only screen and (max-width: $tablate) {
+    align-self: center;
+  }
+}
+.nav {
+  list-style: none;
+  @media only screen and (max-width: $tablate) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    &:hover {
+      background-color: $color-primary-1;
+    }
+  }
+  &__item-active {
+    background-color: $color-primary-1;
+  }
+  &__link:link,
+  &__link:visited {
+    font-size: 2rem;
+    color: $color-black;
+  }
+}

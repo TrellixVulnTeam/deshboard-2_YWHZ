@@ -1,0 +1,193 @@
+.card {
+  @media only screen and (max-width: $tablate-l) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  padding: 1rem 4rem;
+  grid-row: span 2;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a:link,
+    a:visited {
+      font-size: 1.2rem;
+      color: $color-primary-4;
+      text-decoration: none;
+    }
+  }
+  &__conteiner {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    overflow: visible;
+    @media only screen and (max-width: $laptop-s) {
+      gap: 5rem;
+    }
+    @media only screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 0 12px rgba($color-black, 0.1);
+    &-1 {
+      background-color: $color-primary-2;
+    }
+    &-2 {
+      background-color: $color-primary-3;
+      .card__img-1 {
+        background-color: $color-primary-3;
+        color: $color-black;
+        border: 1.5px solid $color-black;
+      }
+    }
+  }
+  // card inner section
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img-box {
+    display: flex;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid $color-primary-2;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: -1.5rem;
+    &-1 {
+      z-index: 3;
+      background-color: $color-black;
+      color: $color-white;
+    }
+    &-2 {
+      z-index: 2;
+    }
+    &-3 {
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__more {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: $color-black;
+      border-radius: 50%;
+    }
+  }
+  &__center {
+    padding: 2rem 0;
+    display: grid;
+    grid-row-gap: 0.5rem;
+  }
+  &__progress {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: rgba($color-black, 0.2);
+    border-radius: 10px;
+    height: 5px;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 5px;
+      border-radius: 10px;
+      background-color: $color-black;
+    }
+    &-1:after {
+      width: 35%;
+    }
+    &-2:after {
+      width: 80%;
+    }
+  }
+}
+
+// Remainders
+.remnder {
+  padding: 1rem 4rem;
+  margin-top: 2rem;
+  &__box {
+    border: 1px solid $color-grey;
+    border-radius: 8px;
+    padding: 2rem;
+    @media only screen and (max-width: $tablate-s) {
+      display: block;
+    }
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__btn {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px dashed $color-primary-2;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+  }
+  &__more-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/-1;
+  }
+  &__more {
+    display: flex;
+    width: 100%;
+    grid-gap: 2rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: rgba($color-primary-2, 0.5);
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      z-index: 1000;
+      display: block;
+      position: absolute;
+      top: 0%;
+    }
+    &:after {
+      background-color: $color-primary-2;
+      left: -1rem;
+    }
+    &:before {
+      background-color: rgba($color-primary-2, 0.2);
+      right: -1rem;
+    }
+  }
+}

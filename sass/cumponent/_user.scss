@@ -1,0 +1,82 @@
+.user {
+  @media only screen and (max-width: $tablate-s) {
+    grid-column: span 2;
+  }
+  padding: 1rem 4rem;
+  &__more_icon {
+    font-size: 3rem;
+    color: $color-primary-2;
+    cursor: pointer;
+  }
+  &__content {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-primary-4;
+    border-radius: 100px;
+    transition: all 0.2s;
+    &:hover {
+      background-color: rgba($color-primary-4, 0.8);
+    }
+  }
+  &__content-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__notification {
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+  &__notification-dot {
+    position: relative;
+    &:after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      top: 0.4rem;
+      right: 0.4rem;
+      border-radius: 50%;
+      border: 1px solid $color-white;
+      background-color: $color-primary-4;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    // grid-template-columns: ;
+  }
+  &__img {
+    width: 4rem;
+    border-radius: 50%;
+  }
+  &__name:link,
+  &__name:visited {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-black;
+  }
+  &__drop {
+    font-size: 1.4rem;
+    display: block;
+    border: 1px solid $color-primary-2;
+    color: $color-primary-4;
+    border-radius: 50%;
+    background-color: rgba($color-primary-2, 0.3);
+    cursor: pointer;
+  }
+}
